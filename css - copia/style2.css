@@ -1,0 +1,334 @@
+/* Reset de estilos */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 100px;
+}
+
+/* Barras de desplazamiento */
+body {
+    --sb-track-color: #21282b;
+    --sb-thumb-color: #6b95af;
+    --sb-size: 10px;
+  
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+}
+
+/* Barra de progreso */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 0%;
+    background-color: rgba(0, 115, 255, 0.515);
+    z-index: 1000;
+}
+
+/* Listas y enlaces */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: orange;
+}
+
+/* Header */
+header {
+    position: relative;
+    background: rgb(1, 17, 132);
+    color: white;
+    padding: 1em;
+    width: 100%;
+    height: 80px;
+    max-width: 1300px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-color: #ffffff5e;
+    border-radius: 10px;
+    max-height: 50px;
+    box-shadow: 0 6px 20px -2px black;
+}
+
+/* Botones */
+.bn32 {
+    background-color: rgba(1, 17, 132);
+    border-radius: 2px;
+    border-color: transparent;  
+    padding: 0.3em 0.8em;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(45deg, transparent 50%, rgb(0, 85, 255) 50%);
+    background-position: 25%;
+    background-size: 400%;
+    transition: background 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.bn32:hover {
+    color: rgb(255, 166, 0);
+    background-position: 100%;
+}
+
+/* Barra de navegación */
+.navbar {
+    width: 100%;
+    height: 80px;
+    max-width: 1300px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-color: #ffffff5e;
+    border-radius: 10px;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 1.2rem;
+    padding-right: 5%;
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Botones de acción */
+.action_btn {
+    background-color: rgb(255, 166, 0);
+    color: #ff0000;
+    padding: 0.5rem 1rem;   
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* Menú desplegable */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 100px;
+    height: 0;
+    width: 200px;
+    background: rgba(0, 38, 255, 0.204);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container {
+    margin: 30px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    padding-left: 5px;
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+#logo-img {
+    width: 150px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    #logo-img {
+        width: 90px;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+/* Sección HERO */
+section #hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Contenido */
+#content{
+    overflow: hidden;
+    margin-top: 50px; /* Ajusta el margen según el tamaño del encabezado */
+    padding: 20px;
+    margin-left: 6%;
+    margin-right: 6%;
+    background-color: rgba(255, 255, 255, 0.497); /* Agrega un fondo blanco o transparente detrás del contenido */
+    border-radius: 10px; /* Agrega bordes redondeados al contenido */
+    box-shadow: 0 0 15px rgba(35, 63, 125, 0.418); /* Agrega una sombra al contenido */
+    max-height: 400px;
+}
+#content2 {
+    overflow: auto;
+    margin-top: 15px; /* Ajusta el margen según el tamaño del encabezado */
+    padding: 20px;
+    margin-left: 6%;
+    margin-right: 6%;
+    background-color: rgba(255, 255, 255, 0.497); /* Agrega un fondo blanco o transparente detrás del contenido */
+    box-shadow: 0 0 15px rgba(35, 63, 125, 0.418); /* Agrega una sombra al contenido */
+    max-height: 350px;
+    border-radius: 10px; /* Agrega bordes redondeados al contenido */
+
+}
+
+/* Formulario */
+form {
+    display: flex;
+    width: 50%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 97%;
+    height: 3em;
+    border: none;
+    outline: auto;
+    border-bottom: 2px solid black;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc5d;
+    border-radius: 4px;
+    background: #2b3d842e;
+    color: rgba(18, 25, 221, 0.238);
+}
+
+button {
+    background-color: #4c7faf;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+img {
+    margin: 01.3%;
+    display: block;
+    width: 30%;
+    height: 50%;
+    float: left;
+    justify-content: space-evenly;
+    background: linear-gradient(to right, rgb(0, 0, 0, 0.4) rgb(0, 0, 0, 0));
+}
+
+/* Diseño responsive */
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(160, 147, 147, 0.9);
+    text-align: center;
+    padding: 0px;
+    position: fixed;
+    bottom: 0.8%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+}
